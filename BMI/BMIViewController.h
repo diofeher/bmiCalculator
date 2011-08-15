@@ -14,4 +14,6 @@
 @property (nonatomic, retain) IBOutlet UITextField *height;
 @property (nonatomic, retain) IBOutlet UILabel *calculateLabel;
 
+- (IBAction)calculate:(id)sender;
+
 @end

@@ -14,6 +14,27 @@
 @synthesize weight;
 @synthesize calculateLabel;
 
+-(IBAction)calculate:(id)sender {
+    float lheight = (float)[self.height.text floatValue];
+    int lweight = [self.weight.text intValue];
+    float bmi = lweight / (lheight * lheight);
+    NSString *condition;
+    if (bmi < 18.5) {
+        condition = @"Underweight";
+    }
+    else if (bmi < 25.0) {
+        condition = @"Normal";
+    }
+    else if (bmi < 30.0) {
+        condition = @"Overweight";
+    }
+    else {
+        condition = @"Obese";
+    }
+    NSString *output = [NSString stringWithFormat:@"%.02f \n %@", bmi, condition];
+    self.calculateLabel.text = output;
+}
+
 - (void)didReceiveMemoryWarning
 {
     // Releases the view if it doesn't have a superview.
