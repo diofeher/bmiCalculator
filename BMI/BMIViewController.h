@@ -10,4 +10,8 @@
 
 @interface BMIViewController : UIViewController
 
+@property (nonatomic, retain) IBOutlet UITextField *weight;
+@property (nonatomic, retain) IBOutlet UITextField *height;
+@property (nonatomic, retain) IBOutlet UILabel *calculateLabel;
+
 @end

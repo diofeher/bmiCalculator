@@ -10,6 +10,10 @@
 
 @implementation BMIViewController
 
+@synthesize height;
+@synthesize weight;
+@synthesize calculateLabel;
+
 - (void)didReceiveMemoryWarning
 {
     // Releases the view if it doesn't have a superview.
